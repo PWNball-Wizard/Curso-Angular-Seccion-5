@@ -1,0 +1,100 @@
+<h1>
+    Héroes
+</h1>
+
+
+<dl>
+    <td>
+        Nombre
+    </td>
+    <dd>
+        {{nombre}}
+    </dd>
+
+    <td>
+        Edad
+    </td>
+    <dd>
+        {{edad}}
+    </dd>
+
+    <td>
+        Metodo
+    </td>
+    <dd>
+        {{getHeroDescription()}}
+    </dd>
+
+    <td>
+        Capitalizado
+    </td>
+    <dd>
+        {{capitalizedName}}
+    </dd>
+
+    <!-- para hacer que los botones tengan un tamaño fijo usamos la clase btn-block -->
+    <!--  para hacer que los botones ocupan cierto tamaño, por ejemplo 50 y 50 usamos la clase de bootstrap btn-lg -->
+
+
+    <button *ngIf="nombre === 'spiderman'"
+        (click)="cambiaNombre('hulk')" 
+        class="btn btn-primary btn-block btn-lg mx-2">
+        Cambiar nombre
+    </button>
+
+    <button *ngIf="edad === 13"
+    (click)="cambiaEdad(30)" 
+    class="btn btn-primary btn-block btn-lg mx-2">
+        Cambiar edad
+    </button>
+
+    <button
+    (click)="resetForm()" 
+    class="btn btn-primary btn-block btn-lg mx-2">
+        Reset
+    </button>
+
+    <!-- <hr>
+
+    <td>
+        <label>
+            Nombre:
+        </label>
+        Batman
+    </td>
+    <dd>
+        <label>
+            Nombre Real:
+        </label>
+        Bruce Wayne
+    </dd>
+
+    <hr>
+
+    <td>
+        <label>
+            Nombre:
+        </label>
+        Ironman
+    </td>
+    <dd>
+        <label>
+            Nombre Real:
+        </label>
+        Tony Stark
+    </dd>
+
+    <hr>
+    <td>
+        <label>
+            Nombre:
+        </label>
+        Hulk
+    </td>
+    <dd>
+        <label>
+            Nombre Real:
+        </label>
+        Bruce Banner
+    </dd> -->
+</dl>
